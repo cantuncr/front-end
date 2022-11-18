@@ -1,0 +1,60 @@
+body {
+    background-image: url("https://rstatic.stores.musicarts.com/locations/3450_gonzales_la.jpg");
+    backdrop-filter: blur(10px);
+    font-family: 'Roboto', sans-serif;
+}
+/* Spektrumal renk geçişi */
+h1, h2 {
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);   -webkit-background-clip: text;
+    color: transparent;  
+    text-align: center;
+    font-size: 45px;
+}
+h3 {
+    color:rgb(167, 16, 159);
+}
+ul {
+    text-align: center;
+}
+a {
+    color: rgb(231, 19, 150);
+    font-size: 25px;
+}
+p {
+    color:white;
+}
+
+/* Ortalama */
+div.container {
+    text-align: center;
+  }
+ul.myUL {
+    display: inline-block;
+    text-align: left;
+
+  }
+.header-yellow {
+    color: rgb(240, 236, 10);
+}
+.resimboyut {
+    width: 300px;
+    height: 240px;
+}
+.li {
+    color: rgba(83, 16, 83, 0.842);
+    padding-inline: 50px;
+    padding-block: 10px;
+    display: inline-block;
+    list-style: none;
+}
+.li2{
+    list-style-position:inside;
+}
+.top {
+    text-decoration: none;
+    padding: 10px;
+    font-family: sans-serif;
+    color: #fff;
+    background: #000;
+    border-radius: 100px;
+  }

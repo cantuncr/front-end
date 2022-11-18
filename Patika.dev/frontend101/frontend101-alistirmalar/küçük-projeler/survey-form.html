@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Harvard University Camp Event Participation Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body style="background-color:coral">
+    <h1 id="title">Harvard University Camp Event Participation Form</h1>
+    <p id="description">Thank you for your interest. Please fill out this form to participate.</p>
+    <form id="survey-form" action="='https://register-harvardcampevent.org">
+        <fieldset>
+         <div> <label for="name" id="name-label">Name: <input id="name" name="name-surname" type="text" placeholder="Name Surname" required/> </label></div>
+         <div><label for="email" id="email-label">Mail: <input id="email" name="email" type="email" placeholder="xxx@xxx.com" required/> </label></div>
+         <div><label for="number" id="number-label">Number: <input id="number" name="number" type="number" min="10000000000" max="999999999999" minlength="12" maxlength="12" placeholder="+1 XXX XXX XXXX" required/> </label></div>
+        </fieldset>
+        <fieldset>
+            <label for="transportation">How will you provide your transportation?</label>
+            <select id="dropdown" name="terms-and-">
+                <option value="choose">Please choose transportation method</option>
+                <option value="car">Own Vehicle</option>
+                <option value="shuttle">Harvard Shuttle</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <label>How many people will you stay in tents?</label>
+            <input type="radio" id="2_people" name="number_of_people" value="2_people">
+            <label for="2_people">2 People</label>
+            <input type="radio" id="3_people" name="number_of_people" value="3_people">
+            <label for="3_people">3 People</label>
+        </fieldset>
+        <fieldset>
+            <legend>Are you a member of our student club?</legend>
+            <input type="checkbox" id="yes" name="yes" value="yes">
+            <label for="yes">Yes</label>
+            <input type="checkbox" id="no" name="no" value="no" checked>
+            <label for="no">No</label>
+        </fieldset>
+        <fieldset>
+            <textarea name="comments" id="comments" cols="30" rows="10" placeholder="Enter your suggestions here..."></textarea>
+        </fieldset>
+        <input id="submit" type="submit" value="Submit"/>
+    </form>
+</body>

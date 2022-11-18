@@ -1,0 +1,47 @@
+#logo {
+    text-align: center;
+}
+#search-bar {
+    text-align: center;
+    background-color: #EEEEEE
+}
+#search-bar input {
+    margin-bottom: 5px;
+}
+#box1 {
+    background-color: #7EE5DA;
+}
+#box2 {
+    background-color: #70CCC2;
+}
+#box3 {
+    background-color: #62B3AA;
+    text-align: center;
+}
+#box3 input {
+    margin-bottom: 5px;
+}
+#box3 a {
+    margin-left: 10px;
+}
+#box1, #box2, #box3 {
+    display:inline-block;
+    padding: 0 3px;
+    position: relative;
+    margin: 5px;
+    float:left;
+    width:32%;
+    height:100px;
+ }
+ li {
+    list-style: none;
+    text-align: center;
+}
+ footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    text-align: center;
+ }
