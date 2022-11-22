@@ -4208,13 +4208,564 @@ Bu ödev ile birlikte CSS bölümünü tamamladınız, tebrik ederiz!
 
 ---
 
+# Bootstrap
+
+Bootstrap ile responsive web tasarımını hızla ve verimli bir biçimde oluşturulabilir. Bu eğitim sizin rehberiniz olacak.
+
+Grid sistem, continer, row, col yapısı, responsive yapı, ui component
 
 
+##Konular
+5 bölüm ve 21 konu
+
+## Bootstrap Nedir? - 7 konu
+- Bootstrap Nedir?
+- Bootstrap 4 Dökümanlarına Ulaşmak ve Bootstrap 5 Hakkında
+- 12'lik Izgara(Grid) Sistemini Anlamak
+- Bootstrap - Genel Tutucu(Container), Satır Blokları(Row) ve Kolon(Col) Yapısı
+- Bootstrap - Ekran Çözünürlüğü / Cihaz Duyarlı(Responsive) Kolon Yapısı Kullanımları
+- Bootstrap - Satır Blokları (Row) Kullanımı
+- Ödev 1
+## Bootstrap Devam Konuları - 5 konu
+- Bootstrap Kullanarak Web Sitesi Nasıl Yapılır (Demo)
+- Bootstrap Renk Strandartları, Tipografi, Margin ve Padding Kullanımı
+- Display Özellikleri ile Responsive Yapıya Göre İstenilen Blokların Gösterilmesi / Gizlenmesi
+- Bootstrap - Offset Kullanımı
+- Bootstrap Sıralama Özellikleri Kullanarak Responsive Yapıya Göre Tepkilerin Düzenlenmesi
+## Bootstrap Bileşenleri (UI Components) - 2 konu
+- Bootstrap Bileşenlerine(UI Components) Genel Bakış
+- Ödev 2
+## Alıştırmalar & Ödevler - 5 konu
+- Bootstrap ile Medium Klon Çalışması - Tek Video
+- Bootstrap ile Medium Klon Çalışması - Bölüm 1
+- Bootstrap ile Medium Klon Çalışması - Bölüm 2
+- Bootstrap ile Medium Klon Çalışması - Bölüm 3
+- Bootstrap ile Medium Klon Çalışması - Bölüm 4
+## Bootstrap Harici CSS Kütüphaneleri - 2 konu
+- Diğer CSS Kütüphanelerine Genel Bakış
+- Ödev 3
+
+---
+
+## Bootstrap Nedir?
+
+![Bootstrap](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/bootstrap/bootstrap-nedir/figures/Bootstrap.png)
+
+Bootstrap dünyanın en popüler, açık kaynak kodlu, ücretsiz, farklı cihazlar için responsive tasarıma duyarlı bir CSS **Framework(kütüphane)**'üdür.
+
+İçerisinde mevcut olan sayısız tablo, grafik, ikon, carousel, navigasyon gibi pek çok hazır tasarım sayesinde sitenizi kolayca tasarlayabilirsiniz.
+
+Ayrıca Bootstrap‘in kullandığı Grid (Izgara) sistemi ile sitenizi istediğiniz bölümde konumlandırabilirsiniz. Bu özellik, ekranı dilediğiniz ölçüde bölüp, ayırdığınız bu kısımlara kolayca müdahale etmenizi sağlamaktadır.
+
+**Basit bir hazır Bootstrap örneği:**
+```bootstrap
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1>My First Bootstrap Page</h1>
+  <p>Resize this page to see the responsive effect!</p> 
+</div>
+  
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <h2>London</h2>
+      <p>London is the most populous city in the United Kingdom,
+      with a metropolitan area of over 13 million inhabitants.</p>
+    </div>
+    <div class="col-sm-4">
+      <h2>Paris</h2>
+      <p>The Paris area is one of the largest population centers in Europe,
+      ith more than 12 million inhabitants.</p>
+    </div>
+    <div class="col-sm-4">
+      <h2>Tokyo</h2>
+      <p>Tokyo is the center of the Greater Tokyo Area,
+      and the most populous metropolitan area in the world.</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+```
+
+**Çıktı:**
+![Çıktı](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/bootstrap/bootstrap-nedir/figures/website.png)
+
+**Faydalı Linkler:**
+- [Resmi Bootstrap Dökümantasyonu](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+- [Bootstrap Bileşenleri 1](https://www.toptal.com/front-end/what-is-bootstrap-a-short-tutorial-on-the-what-why-and-how)
+- [Bootstrap Bileşenleri 2](https://www.w3schools.com/whatis/whatis_bootstrap.asp)
+- [Hazır Bootstrap Temaları](https://themes.getbootstrap.com/)
+
+---
+
+## Bootstrap 4 Dökümanlarına Ulaşmak ve Bootstrap 5 Hakkında
+Bootstrap kütüphanesi 2011 yılının Ağustos ayından beri açık kaynaklı olarak geliştiriliyor aynı zamanda gelişen web teknolojileri ile birlikte yeni versiyonlar çıkartıp kütüphanenin kapsamını artırarak kütüphanenin gücünü artırıp, kullanımını kolaylaştırıyor. Fakat yeni versiyon ne kadar iyi bir özellik gibi gözükse de, yayınlandıkları zaman bazı eski versiyon özellikleri ve yazım şekilleri de terk ediliyor, buda bazı eski kodların yeni versiyonlarda çalışmasını imkansız hale getiriyor.
+
+Bu seri çekilirken Bootstrap'in 5. Versiyonu henüz Beta test aşamasında olduğu için kurs sürecinde Bootstrap 4.5 sürümü kullanılmıştır. Size önerilen Bootstrap 4 ile Bootstrap 5 arasında pek de fark olmadığından kurs ile birlikte 4 versiyonunu öğrenip, 5. versiyondaki küçük değişiklikleri de stabil bir sürüm çıktığı zaman öğrenmeniz olacaktır.
+
+Son çıkmış sürümü kullanmadığımızdan, [Bootstrap Sitesinin](https://getbootstrap.com/) Docs(Döküman) kısmına girdiğinizde sağ yukarıdan versiyon seçimini yapmanız gerekmektedir. Latest versiyon yerine V(4.5.X) seçmeniz gerekiyor. Tıkladığınız zaman [bu sayfaya](https://getbootstrap.com/docs/4.5/getting-started/introduction/) geleceksiniz.
+
+## Versiyon 5'in Versiyon 4'e Göre Farkı
+Bootstrap 5 in en çok sevilen özelliği kütüphanenin jquery kütüphanesinden tamamen bağımsız hale gelmesi. Önceki versiyonlarda jquery kullanmadan Bootstrap kullanılamıyordu fakat artık jquery kullanmadan da Bootstrap'in özelliklerinden yararlanabiliyorsunuz. Tabi hala jquery kullanmak isterseniz de entegre edebiliyorsunuz.
+
+Bootstrap 5 ile gelen ana özelliklerden diğeri de, Arapça gibi **sağdan sola okunan** diller için destek. Bootstrap 4 versiyonunda **Left (sol)** ve **Right (sağ)** sistemleri **start (başlangıç)** ve **end(bitiş)** sistemine dönüştü. Aksini belirtmediğiniz zamanlar left yazacağınıza start, right yazacağınıza da end yazmanız gerekecek.
+
+Bootstrap'in bu sistemi getirmesindeki amacı sizin dinamik olarak sağdan sola dillerde start'ı right, end'i left olarak deklere edip her dil için okunaklı bir site yapabilmenizi sağlamak. Bazı değişten syntax örnekleri...
 
 
+Versiyon farklarının geri kalanlarını [bu linkten](https://getbootstrap.com/docs/5.0/migration/) görebilirsiniz.
 
 
+## Dökümanlar Nasıl Kullanılır?
+Döküman okuyabilmek ve dokümanlar arasından aradığınız şeyleri bulabilmek, mühendislerin ve kod yazarlarının sahip olabileceği en faydalı özelliklerden biridir. Bilgisayar dünyasında sorularınızın cevapları çoğunlukla **Stackoverflow** gibi forumlarda ve yeni öğrenmeye çalıştığınız bilgilerde hep dökümantasyonlarda bulunmaktadır.
 
+Yeni başladığınız kütüphanelerin dökümanlarında her zaman **getting started** bölümünden başlamanız önerilir. Bu bölümde nasıl bilgisayarınıza kuracağınız ve dikkat etmeniz gereken önemli konulardan bahsedilir. Sonrasında çoğu dökümantasyonda basit bir proje yazarak adım adım sizi yönlendirir. Yeni bir kütüphaneyi öğrenmeye çalıştığınız zaman sizi en kolay alıştıracak bölümler bunlardır.
+
+Bootstrap gibi arayüz kütüphanelerinde kendi projenize ek olarak ekleyebileceğiniz çok sayıda bileşen bulabilirsiniz. Mesela [dökümantasyonun components kısmında](https://getbootstrap.com/docs/4.5/components/alerts/) çok fazla sayıda hazır bileşen bulunmaktadır.
+
+Bu bölümden bulduğunuz bileşenleri kendi uygulamanıza entegre etmek isterseniz, sitede hazır olarak bulunan kodu kullanabilirsiniz. Mesela örnek olarak yüklenme animasyonu olarak kullanabileceğiniz ["border spinner" sayfasına gelirseniz.](https://getbootstrap.com/docs/4.5/components/spinners/) Orada size verilen kodu kullanarak o bileşeni kendi kodunuzda da görebileceksiniz. **Çalışması için Bootstrap'i kodunuzda çağırdığınıza emin olun!**
+
+```html
+<div class="spinner-border" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+```
+
+Bootstrap dökümanında gezmeniz sizin için kütüphanenin size sunduğu tüm fırsatları görebilmeniz için çok büyük bir fırsattır. Her dersten sonra Bootstrap dökümanlarından ders konusunu bulup da tekrar edebilirsiniz. Bu da sizin ders konusunu daha iyi anlamanıza ve o konu hakkında başka yöntemler öğrenmenizi sağlayacaktır.
+
+---
+
+## 12'lik Izgara(Grid) Sistemini Anlamak
+Bootstrap, sayfa düzeni (layout) oluşturmak için, CSS flexbox ile oluşturulmuş ızgara (grid) sistemini kullanmaktadır.
+
+**Bootstrap ızgara sistemi 3 ana yapıdan oluşur:**
+
+- Kapsayıcı (.container)
+- Satırlar (.row)
+- Kolonlar (col-*) (Örnek: .col-md-8)
+
+Her bir sütun, 12 kolondan meydana gelmekte ve 12'lik Grid sistemi oluşturmaktadır. 12'lik ızgara sisteminde, kolon sayısı varyasyonları ile istenildiği gibi tasarım yapılabilmektedir.
+
+![Bootstrap12'likGridSyst.](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/bootstrap/12lik-izgaragrid-sistemini-anlamak/figures/izgara-sistemi.jpg)
+
+### Öntanımlı Kolon Sınıf Adları
+Her ölçüdeki cihaza uyumlu (responsive) tasarımın oluşturulması için Bootstrap'te öntanımlı kolon sınıfları (class) kullanılır.
+
+### Bootstrap Kolon Sınıfları
+**Örnekler:**
+![BootstrapKolonSınıfları](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/bootstrap/12lik-izgaragrid-sistemini-anlamak/figures/ornekler.jpg)
+
+### Eşit Kolonlar
+Eşit kolonlu tasarım için;
+
+- 12 adet 1'er kolon (.col-[sınıfAdı]-1)
+- 6 adet 2'li kolon (.col-[sınıfAdı]-2)
+- 4 adet 3'lü kolon (.col-[sınıfAdı]-3)
+- 3 adet 4'lü kolon (.col-[sınıfAdı]-4)
+- 2 adet 6'lı kolon (.col-[sınıfAdı]-6)
+- 1 adet 12'li kolon (.col-[sınıfAdı]-12) oluşturulabilir.
+- 
+Ya da `col` sınıfına sahip element sayısına göre (Örneğin; 3 adet `.col` sınıfı olan elementler 3 adet kolon oluşturur) otomatik olarak eşit kolonlara bölünebilir.
+
+![EşitKolonlar](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/bootstrap/12lik-izgaragrid-sistemini-anlamak/figures/esit-kolonlu-tasarim.jpg)
+
+```html
+<div class="row">
+    <div class="col">Kolon</div>
+    <div class="col">Kolon</div>
+    <div class="col">Kolon</div>
+    <div class="col">Kolon</div>
+    <div class="col">Kolon</div>
+    <div class="col">Kolon</div>
+    <div class="col">Kolon</div>
+    <div class="col">Kolon</div>
+    <div class="col">Kolon</div>
+    <div class="col">Kolon</div>
+    <div class="col">Kolon</div>
+    <div class="col">Kolon</div>
+</div>
+
+<div class="row">
+    <div class="col-2">Kolon</div>
+    <div class="col-2">Kolon</div>
+    <div class="col-2">Kolon</div>
+    <div class="col-2">Kolon</div>
+    <div class="col-2">Kolon</div>
+    <div class="col-2">Kolon</div>
+</div>
+
+<div class="row">
+    <div class="col-3">Kolon</div>
+    <div class="col-3">Kolon</div>
+    <div class="col-3">Kolon</div>
+    <div class="col-3">Kolon</div>
+</div>
+
+<div class="row">
+    <div class="col-4">Kolon</div>
+    <div class="col-4">Kolon</div>
+    <div class="col-4">Kolon</div>
+</div>
+
+<div class="row">
+    <div class="col-6">Kolon</div>
+    <div class="col-6">Kolon</div>
+</div>
+
+<div class="row">
+    <div class="col-12">Kolon</div>
+</div>
+```
+
+### Eşit Olmayan Kolonlar
+Kolon sayılarının 12'ye tamamlanma zorunluluğu yoktur. Tasarıma göre istenilen sayıda kolonlar oluşturulabilir ve istenilen yerlerde boşluk bırakılabilir.
+
+- 1 adet 2'li kolon (.col-[sınıfAdı]-2) ile 1 adet 10'lu kolon (.col-[sınıfAdı]-10) ya da 1 adet 8'li kolon (.col-[sınıfAdı]-8) ile 1 adet 4'lü kolon (.col-[sınıfAdı]-4) 12'ye tamamlanabilir.
+
+Tek bir adet 8'li kolon (.col-[sınıfAdı]-8), tek bir adet 6'lı kolon (.col-[sınıfAdı]-6) ya da 1 adet 4'lü kolon (.col-[sınıfAdı]-4) ile 1 adet 5'li kolon (.col-[sınıfAdı]-5) kolon 12'ye tamamlanmadan bıraklabilir. Böylece **eksik bırakılan kolon değeri kadar** yan tarafta boşluk kalmış olur.
+
+Verilen kolon değerlerinin toplamı 12'den fazla olması durumunda son kolon bloğu bozmayacağı için alt tarafa geçer. **Örnek olarak;**
+
+1 adet 8'li kolondan sonra 1 adet 6'lı kolon değeri verilir ise 8 + 6 = 14 toplam kolon sayısı 12'den büyük olacağı için 6'lı kolon 8'li kolonun altına geçer.
+
+Kolonların arasında da boşluk bırakmak mümkün. Bunun için `col` sınıfının yanına öntanımlı `margin` ve margin yönünü (`ml-auto` gibi) belirten bir sınıf adı daha eklenmelidir. Kolonun solunda boşluk bırakmak için margin (m) left (l) yani `ml-auto` sınıfı eklemeli, aynı şekilde sağ tarfında boşluk bırakılmak istenirse margin (m) right (r) yani `mr-auto` sınıfı eklemelidir.
+
+Örneğin; `col-4 mr-auto` sınıfı olan bir kolonun sağ tarafında, `col-4 ml-auto` sınıfı ise kolonun solunda boşluk bırakır.
+
+![EşitOlmayanKolonlar](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/bootstrap/12lik-izgaragrid-sistemini-anlamak/figures/esit-olmayan-kolonlar.jpg)
+
+```html
+<div class="row">
+    <div class="col-2">2 Kolon</div>
+    <div class="col-10">10 Kolon</div>
+</div>
+
+<div class="row">
+    <div class="col-8">8 Kolon</div>
+    <div class="col-4">4 Kolon</div>
+</div>
+
+<div class="row">
+    <div class="col-8">8 Kolon</div>
+    <div class="col-6">6 Kolon</div>
+</div>
+
+<div class="row">
+    <div class="col-4">4 Kolon</div>
+    <div class="col-5">5 Kolon</div>
+</div>
+
+<div class="row">
+    <div class="col-4 mr-auto">4 Kolon</div>
+    <div class="col-5">5 Kolon</div>
+</div>
+
+<div class="row">
+    <div class="col-4">4 Kolon</div>
+    <div class="col-5 ml-auto">5 Kolon</div>
+</div>
+```
+
+### Kolonların Sıralanması
+Öntanımlı `order-[sıra numarası]` sınıfını ekleyerek kolonları sıralayabiliriz.
+
+Örneğin; `col-3 order-3` üç kolonluk bölümü üçüncü sıraya yerleştirecektir.
+
+![KolonlarınSıralanması](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/bootstrap/12lik-izgaragrid-sistemini-anlamak/figures/kolon-siralama.jpg)
+
+```html
+<div class="row">
+    <div class="col-3 order-3">3 Kolon</div>
+    <div class="col-4 order-2">4 Kolon</div>
+    <div class="col order-1">5 Kolon</div>
+</div>
+```
+
+### İç İçe Izgara Sistemi
+Bir satırdaki (`row`) kolonun (`col`) içine başka bir satır eklenerek yine kolonlara bölünebilir.
+
+Örneğin; 4'lük bir kolon (`.col-[sınıfAdı]-4`) ile 8'lik bir kolondan (`.col-[sınıfAdı]-8`) oluşan satırdaki 8'lik kolonun içinde yeni bir satır (row) eklenerek 2 adet 6'lık kolon (`.col-[sınıfAdı]-6`) oluşturulabilir.
+
+![İçİçeIzgaraSist.](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/bootstrap/12lik-izgaragrid-sistemini-anlamak/figures/icice-izgara-sistemi.jpg)
+
+```html
+<div class="row">
+    <div class="col-4">4 Kolon</div>
+    <div class="col-8">
+        8 Kolon
+
+        <div class="row">
+            <div class="col-6">6 Kolon</div>
+            <div class="col-6">6 Kolon</div>
+        </div>
+    </div>
+</div>
+```
+
+### Örnek Bir Sayfa İncelemesi
+
+Sayfanın tasarımı yukarıdan aşağıya sırasıyla şöyle hazırlanmış; ilk bölüm 12 kolonlu, ikinci bölüm 8 ve 4 kolonlu, üçüncü bölüm 4 kolonlu üç eşit parça, dördüncü ve beşinci bölüm ise 3 kolonlu dört eşit parçadan oluşturulmuş.
+
+![ÖrnekBirSayfa](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/bootstrap/12lik-izgaragrid-sistemini-anlamak/figures/ornek-sayfa.jpg)
+
+
+### Alıştırma
+Aşağıda görseli verilen sayfayı, Bootstrap 12'li ızgara sistemi ile tasarlayınız.
+
+
+![AlıştırmaSite](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/bootstrap/12lik-izgaragrid-sistemini-anlamak/figures/uygulama.jpg)
+
+---
+
+
+# Container, Row ve Col Yapısı
+**Container, row ve column** yapısı aslında Bootstrap kullanım mantığının temellerini oluşturuyor diyebiliriz. Bu yapıyı anlamak Bootstrap ile çalışmayı çok çok kolaylaştıracaktır. Öncelikle `container` ile başlayalım.
+
+## `container`
+Container'ı(konteynır) isminden de biraz anlaşılacağı gibi, içine web sayfamızda bulunması gereken yazıları, resimleri, videoları veya herhangi bir içeriği koyduğumuz kapsayıcı bir çerçeve, kutu gibi düşünebiliriz. Biz içeriklerimizi bu container içerisine koyuyoruz ve bir tarayıcıdan web sayfamız görüntülendiğinde container kendisini ekranın tam ortasına gelecek şekilde ayarlıyor. Görsel bir örnek üzerinde en ilerlemek daha açıklayıcı olacaktır. Örnek olarak aşağıda kodluyoruz'dan aldığım bir ekran görüntüsünü inceleyebiliriz.
+
+Becerilerini geliştir, Mezunlar Kulübü'ne Katıl ve Şirketlerle Buluş kısımlarını kapsayan ancak bize gözükmeyen bir çerçeve olduğunu düşünelim. Bu çerçeve ile sayfayı görüntülediğim ekran arasında sağ taraftan ve sol taraftan eşit miktarda boşluklar var gördüğünüz gibi, yani container ortalanmış.
+
+![Container](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/bootstrap/bootstrap-genel-tutucucontainer%2C-satir-bloklarirow-ve-koloncol-yapisi/figures/kodluyoruz-container-red.png)
+
+İşte sayfamızın içeriklerini böyle belirli ölçülerde container'lar içerisine koyuyoruz ve ayrıca container'lara vereceğimiz class isimlerine göre onlara farklı özellikler katıyoruz. Örneğin containerlar boyutlarını değiştirip responsive bir tasarım yapmamıza yardımcı oluyorlar. Yani biz bir sayfayı cep telefonu, tablet veya laptop ile görüntülediğimizde cihazların ekran boyutları farklı olacağı için, container'ımızda kendisini bu ekran boyutuna göre yeniden ölçeklendiriyor, ortalıyor veya düzenliyor. Tüm sayfayı tek bir container içerisine koyup düzenleyebileceğimiz gibi, birden fazla container veya iç içe container'da kullanılabiliyor gerektiği durumlarda.
+
+Aşağıdaki tabloyu [bootstrap](https://getbootstrap.com/docs/4.4/layout/overview/)'in official sayfasından bulabilirsiniz.
+
+![ContainerTable](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/bootstrap/bootstrap-genel-tutucucontainer%2C-satir-bloklarirow-ve-koloncol-yapisi/figures/container-sizes.png)
+
+En soldaki sütunda container class isimlerini görüyoruz, mesela `.container` veya `.container-md` gibi. Class'ların kullanımını örnek ile göstermek gerekirse; `<div class="container-md"></div>` şeklinde bir HTML dosyası içerisinde kullanabiliriz. HTML dosyası içerisinde class isimleri tanımlarken başındaki "."(nokta)'yı kaldırmamız gerekli. Peki bu tablo bize neyi anlatıyor? .container-md class'ını kullanarak bu tabloyu açıklamaya çalışacağım. .container-md class'ına sahip bir container;
+
+- **extra small** bir cihazda, yani **576px'den küçük** olan bir cihazda, ekran boyutunun **100%**'ünü kaplamaktadır.
+- **small** bir cihazda, yani **576px'den büyük veya eşit** olan bir cihazda, ekran boyutunun **100%**'ünü kaplamaktadır.
+- **medium** bir cihazda, yani **768px'den büyük veya eşit** olan bir cihazda, bu containerın genişliği **720px** olacaktır.
+- **large** bir cihazda, yani **992px'den büyük veya eşit** olan bir cihazda, bu containerın genişliği **960px** olacaktır.
+- **X-large** bir cihazda, yani **1200px'den büyük veya eşit** olan bir cihazda, bu containerın genişliği **1140px** olacaktır.
+- **XX-large** bir cihazda, yani **1400px'den büyük veya eşit** olan bir cihazda, bu containerın genişliği **1320px** olacaktır.
+
+Container'larımız bu tablodaki verilen boyutlara göre kendilerini ortalayacak, etrafındaki boşlukları ayarlayacak ve değişen ekran boyutlarına tepki verecektir. Genel olarak container'ların kullanımı bu şekilde diyebiliriz.
+
+
+## Row ve Column Yapısı
+Row(satır), column(sütun) sistemi Bootstrap'in grid system(ızgara sistemi) denilen düzenini oluşturuyor. Grid system ile bir web sayfası 12 adet sütuna bölünmüş ve sayfanın içeriği bu sütunların boyutlarına göre düzenlenmiş diyebiliriz. Genel olarak göstermek gerekirse aşağıdaki resim örnek bir sayfanın 12 adet sütuna bölündüğünde hangi içeriğin hangi sütunlar boyutunda olacağını, aralarındaki boşlukları göstermektedir.
+
+![Row ve Column Yapısı-1](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/bootstrap/bootstrap-genel-tutucucontainer%2C-satir-bloklarirow-ve-koloncol-yapisi/figures/overall-grid.png)
+
+İçeriklerimizin genişliğini sütun yapısına göre belirliyoruz demiştik. Yani sayfamızda paylaşmak istediğimiz bir yazı, 12 sütunun 3 tanesini kapsayacak genişlikte olsun, kalan 9 sütun ise bir resim için ayrılmış olsun. Peki içeriklerin uzunluğunu neye göre belirliyoruz? İşte burada da satırları kullanıyoruz. Sayfamızı yukardan aşağıya satırlara bölüyoruz ve her satırın içerisinde ayrı ayrı sütun sayısı, boyutu belirleyebiliyoruz. Bu şekilde satırları ve sütunları bir container içerisinde kullandığımızda grid system uygulamış oluyoruz. Kafa karıştırıcı gibi gözükebilir ancak aşağıdaki resmi incelediğimizde her şey çok net anlaşılacaktır.
+
+![Row ve Column Yapısı-2](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/bootstrap/bootstrap-genel-tutucucontainer%2C-satir-bloklarirow-ve-koloncol-yapisi/figures/grid-details.png)
+
+- İlk Satır Birbirine Eşit Boyutta 12 Adet Sütundan
+- İkinci Satır Birbirine Eşit Boyutta 3 Adet Sütundan
+- Üçüncü Satır 2 Farklı Boyutta Sütundan
+- Dördüncü Satır 2 Eşit Boyutta Sütundan
+- Beşinci Satır İse Tek Bir Sütundan Oluşmaktadır.
+
+Görüldüğü gibi 12 adet sütun yapısını istediğimiz biçimde birleştirerek, ayırarak satırlar ile birlikte kullanarak tasarımımızı yapabiliriz.
+
+Son olarak ise grid yapısını oluşturmak için nasıl bir kod yapısı kullanmamız gerektiğini basit bir örnek ile anlamaya çalışalım.
+
+![Örnek Grid Yapısı](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/bootstrap/bootstrap-genel-tutucucontainer%2C-satir-bloklarirow-ve-koloncol-yapisi/figures/sample-grid.png)
+
+Bu resimde gördüğümüz 2 satırdan oluşan grid yapısını aşağıdaki kod ile oluşturabiliriz.
+
+```html
+<div class="container">
+  <div class="row">
+    <div class="col">
+      1 of 2
+    </div>
+    <div class="col">
+      2 of 2
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      1 of 3
+    </div>
+    <div class="col">
+      2 of 3
+    </div>
+    <div class="col">
+      3 of 3
+    </div>
+  </div>
+</div>
+```
+
+`div` HTML tag'lerine `class="row"` veya `class="col"` sınıfları vererek bu tag'lerin ne amaçla kullanılacağını belirttik. Ayrıca dikkat ederseniz bu grid bir `class="container"` içerisinde bulunmakta.
+
+Row ve column yapısının kullanımı ve mantığı genel hatlarıyla bu şekilde diyebiliriz.
+
+Dersteki kodlar;
+```html
+ <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 bg-primary">Lorem, ipsum.</div>
+            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 bg-secondary">Facilis, saepe!</div>
+            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 bg-success">Placeat, perferendis!</div>
+            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 bg-danger">Repellendus, laudantium.</div>
+            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 bg-warning">A, debitis.</div>
+            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 bg-dark">Nisi, deserunt?</div>
+        </div>
+      </div>
+```
+
+### Kaynaklar
+- https://www.kodluyoruz.org/
+- https://getbootstrap.com/docs/4.4/layout/overview/
+- https://960.gs/
+- https://www.w3schools.com/bootstrap/bootstrap_grid_system.asp
+- https://getbootstrap.com/docs/4.0/layout/grid/
+
+
+---
+
+## Bootstrap - Ekran Çözünürlüğü / Cihaz Duyarlı(Responsive) Kolon Yapısı Kullanımları
+
+<iframe width="1106" height="622" src="https://www.youtube.com/embed/9_mdnDE5UnA" title="Bootstrap Ekran Çözünürlüğü/Cihaz Duyarlı(Responsive) Kolon Yapısı Kullanımı #4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+---
+
+# Bootstrap - Satır Blokları (Row) Kullanımı
+Grid sistem, **satırlardan(rows)** ve **sütunlardan(column)** oluşur. Bir satır(row) 12 column'dan oluşur. Bu satırları istediğimiz şekilde parçalayabiliriz. Aşağıdaki resimde de görüldüğü gibi istersek bunları 12 eşit parçaya ayırabilir ya da 12'ye tamamlanacak herhangi bir şekilde de bölebiliriz. Örneklerle bunları açıklamaya çalışayım.
+
+![Row](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/bootstrap/bootstrap-satir-bloklari-row-kullanimi/figures/Bootstrap-part-2.png)
+
+```html
+<div class="row">
+  <div class="col">Column</div>
+  <div class="col">Column</div>
+</div>
+```
+![2'li Column](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/bootstrap/bootstrap-satir-bloklari-row-kullanimi/figures/6of6.PNG)
+
+```html
+<div class="row">
+  <div class="col">Column</div>
+  <div class="col">Column</div>
+  <div class="col">Column</div>
+</div>
+```
+![3'lü Column](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/bootstrap/bootstrap-satir-bloklari-row-kullanimi/figures/3column.PNG)
+
+```html
+<div class="row">
+  <div class="col">Column</div>
+  <div class="col">Column</div>
+  <div class="col">Column</div>
+  <div class="col">Column</div>
+</div>
+```
+
+![4'lü Column](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/bootstrap/bootstrap-satir-bloklari-row-kullanimi/figures/4column.PNG)
+
+Yukarıdaki örneklerde de görüldüğü üzere satırları eşit parçalar halinde column'lara ayırdık. Peki eşit olmayan column'lar yapabilir miyiz? Tabii ki yapabiliriz. Şimdi de örneklerle eşit olmayan column'lar oluşturalım...
+
+- Bu örnekte 2'ye 10'luk bir column oluşturduk.
+
+```html
+<div class="row">
+  <div class="col-2">2 Column</div>
+  <div class="col-10">10 Column</div> 
+</div>
+```
+
+![2Column,10Column](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/bootstrap/bootstrap-satir-bloklari-row-kullanimi/figures/img-2.PNG)
+
+- Alttaki örnekte ise satırı 8'e 4'lük bir column halinde bölmüş olduk.
+```html
+<div class="row">
+  <div class="col-4">4 Column</div>
+  <div class="col-8">8 Column</div> 
+</div>
+```
+
+![8Column,4Column](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/bootstrap/bootstrap-satir-bloklari-row-kullanimi/figures/8of4.PNG)
+
+- Satırları böldüğümüzde araya ya da herhangi bir kenara boşluk ekleyebiliriz onu da şu şekilde gösterelim;
+
+```html
+<div class="row">
+  <div class="col-4 mr-auto">4 Column</div> <--mr: margin right (sağından boşluk bırak)-->
+  <div class="col-5">5 Column</div> 
+</div>
+
+<div class="row">
+  <div class="col-4"></div>
+  <div class="col-5 ml- auto"></div> <--ml: margin left (solundan boşluk bırak)-->
+</div>
+```
+
+![4-5-4-5 Column](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/bootstrap/bootstrap-satir-bloklari-row-kullanimi/figures/img-7.PNG)
+
+
+İki kod bloğunun çıktısı aynı olacak fakat birinci `col` sağından sola doğru itecek ve boşluk bırakacak diğerinde ise tam tersi ikinci col solundan sağa doğru iterek boşluk bırakacak.
+
+- Bir satırı 4'e 8'lik column'lar halinde böldüğümüzü düşünelim bu satırlar daha sonra kendi içlerinde de tekrar 12'lik column gibi düşünülerek bölünebilir. Bunlara iç içe satırlar diyebiliriz. Aşağıdaki örnekte önce satırı 4'e 8'lik olacak şekilde parçaladık daha sonra 8'lik column'u kendi içinde eşit 2 parçaya böldük.
+
+```html
+<div class="row">
+			<div class="col-4 border">4 Column</div>
+			<div class="col-8 border">8 Column
+				
+				<div class="row">
+					<div class="col bg-primary">6 Column</div> <!--bg: background, primary:color-->
+					<div class="col bg-danger">6 Column</div>  <!--bg: background, primary:color-->
+				</div>
+			
+			
+			</div>
+		</div>
+```
+
+![4-8-6-6 Column](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/bootstrap/bootstrap-satir-bloklari-row-kullanimi/figures/img8.PNG)
+
+### Kaynaklar
+
+[Komple Uygulamalı Web Geliştirme Eğitimi](https://www.udemy.com/course/komple-web-developer-kursu/learn/lecture/9815366#overview)
+[Bootstrap Grid Sistem 1](https://www.sadikturan.com/bootstrap/bootstrap-grids/1201)
+[Bootstrap Grid Sistem 2](https://www.tutorialspoint.com/bootstrap/bootstrap_grid_system.htm)
+[Bootstrap Layout](https://getbootstrap.com/docs/4.1/layout/overview/)
+[Bootstrap Izgara Grid Sistemi](https://fatihhayrioglu.com/bootstrap-izgara-Grid-sistemi-1/)
+
+---
+
+# Bootstrap - Ödev 1
+
+## Bootstrap Özelliklerini Kullanarak Yaptığımız Siteyi Geliştirelim
+Hatırlar mısınız CSS'in ilk ödevinde boynu bükük bir site yapmıştık. Bu site CSS'in özelliklerini kullanan bir müzik aleti satış sitesiydi. Bu siteyi **Bootstrap** ile tekrar tasarlayacağız.
+
+## **Sizden Beklediklerimiz**
+- HTML kısmını önceki ödevden alabilirsiniz fakat baştan yapmanızı öneririz.
+- Menüyü koyu renkli olarak düzenleyin. İsterseniz arka plan rengi de verebilirsiniz.
+- Ana sayfaya bir **jumbotron** koyup içeriğinizin açıklamasını yazınız.
+- Arka plan rengini `#E9ECEF` ile değiştirin.
+- Ürünlerimiz sayfasında **card** yapısını kullanın.
+- Kullandığınız **card** yapısını **grid** sistemin içinde kullanın.
+- Ürün **card** boyutlarının **tamamen aynı** olduğuna dikkat edin.
+- Hakkımızda sayfasını da bir **card** yapısı içine alın.
+- [Bootstrap Dökümantasyonu](https://getbootstrap.com/docs/4.5/getting-started/introduction/)'nu iyi inceleyip farklı elementleri denemeye çalışın.
+
+![ÖdevÖnizleme](https://github.com/Kodluyoruz/taskforce/blob/bootstrap/bootstrap/odev1/figures/bootstrap.gif?raw=true)
+
+Tebrikler, Bootstrap ile ilk sitenizi oluşturdunuz.
+
+---
 
 
 

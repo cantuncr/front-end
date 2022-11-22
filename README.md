@@ -1,4 +1,4 @@
-# front-end
+# front-end 💻
 Front-End Development Manual
 
 Welcome to my repo where I document my projects, notes and experiences in my front-end development adventure.

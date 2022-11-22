@@ -1,0 +1,66 @@
+* {
+    box-sizing:  border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+background: rgba(27, 27, 27);
+}
+
+.container {
+    display: flex; /* Yan-yana getirdik! */
+    justify-content: center; /* Ortaladık! */
+    flex-wrap: wrap; /* Tek satır da responsive (wrap/nowrap */
+}
+
+.card {
+    background: white;
+    width: 270px;
+    
+    margin: 10px; /* Kartların arasına boşluk verdik! */
+    border-radius: 15px;
+}
+
+.card-image {
+    height: 220px;
+    margin-bottom: 15px;
+    background-size: cover;
+    border-radius: 15px 15px 0 0;
+    
+}
+
+.car-1 {
+    background-image: url('https://i.pinimg.com/564x/66/17/12/6617122a9179c522e4710f50c726572d.jpg');
+}
+
+.car-2 {
+    background-image: url('https://i.pinimg.com/564x/66/20/67/6620679cdb80359cadc5c65c719cf2da.jpg');
+}
+
+.car-3 {
+    background-image: url('https://i.pinimg.com/564x/78/b5/de/78b5de545e44385405048a28fd7249db.jpg');
+}
+
+.card p, h2 {
+    padding: 10px;
+}
+
+.card a {
+background-color: black;
+color: white;
+padding: 15px 20px;
+display: block;
+text-align: center;
+margin: 20px 50px;
+text-decoration: none;
+}
+
+
+.card:hover {
+    background-color:rgba(22, 62, 62);
+    color: white;
+    cursor: pointer;
+    transform: scale(1.03);
+    transition: all 0.2s ease;
+}
